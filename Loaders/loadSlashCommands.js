@@ -5,7 +5,7 @@ const { Routes } = require("discord.js")
 module.exports = async bot => {
 
     let commands = []
-
+    
     bot.commands.forEach(async command => {
 
         let slashcommand = new Discord.SlashCommandBuilder()

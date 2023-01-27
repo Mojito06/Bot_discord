@@ -1,4 +1,4 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
 
 module.exports = {
 
@@ -9,6 +9,7 @@ module.exports = {
 
     async run(bot, message){
 
-        await message.reply("Mention d'un utilisateur : <@" + message.author.id + "> \n Mention d'un salon : <#" + message.channel.id +">")
+        const user = message.user.id;
+        await message.reply(`Mention d'un utilisateur : <@${user}> \n Mention d'un salon : <#${message.channel.id}>`)
     }
 }
